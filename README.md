@@ -30,8 +30,8 @@ urllib3==1.26.18
 - Wndows: ```source venv/Scripts/activate```
 
 3. Установить зависимости requirements.txt:
-- Windows: pip install -r requirements.txt
-- MacOS: pip3 install -r requirements.txt
+- Windows: ```pip install -r requirements.txt```
+- MacOS: ```pip3 install -r requirements.txt```
 
 4. Запуск тестов:
 - все тесты: ```pytest```
