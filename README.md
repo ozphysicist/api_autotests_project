@@ -34,7 +34,7 @@ urllib3==1.26.18
 - Windows: ```pip install -r requirements.txt```
 
 4. Запуск тестов:
-- все тесты: ```pytest```
+- запустить все тесты: ```pytest```
 - запуск тестов в конкретном файле: ```pytest tests/test_area.py```
 - запуск тестов и создание allure отчета
 ```pytest --alluredir=./allure-results```
