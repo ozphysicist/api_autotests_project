@@ -18,11 +18,11 @@ urllib3==1.26.18
 
 ## Запуск автотестов
 
-1. Клонировать репозиторий и перейти в него в командной строке:
+1. Клонировать репозиторий и перейти в директорию api_autotests_project:
 
 ```git clone <cсылка на репозиторий github>```
 
-```cd pytest_autotest_project```
+```cd <path>/pytest_autotest_project```
 
 2. Cоздать и активировать виртуальное окружение:
 ```python3 -m venv venv```
@@ -30,8 +30,8 @@ urllib3==1.26.18
 - Wndows: ```source venv/Scripts/activate```
 
 3. Установить зависимости requirements.txt:
-- Windows: ```pip install -r requirements.txt```
 - MacOS: ```pip3 install -r requirements.txt```
+- Windows: ```pip install -r requirements.txt```
 
 4. Запуск тестов:
 - все тесты: ```pytest```
