@@ -5,7 +5,7 @@ from asserts import assert_equal
 
 from base.base_steps import BaseSteps
 from services.employers.utils import validate_employer, validate_employers
-from vars.enums import ResponseCodes, ErrorMessages
+from vars.enums import ErrorMessages, ResponseCodes
 
 
 class EmployerServiceSteps(BaseSteps):
@@ -14,7 +14,7 @@ class EmployerServiceSteps(BaseSteps):
                       only_with_vacancies: bool = None, sort_by: str = None, page: int = None, per_page: int = None,
                       auth: bool = False, locale: str = None, host: str = None) -> Dict:
         result = self._client.get(
-            path=f'/employers',
+            path='/employers',
             auth=auth,
             headers={'HH-User-Agent': user_agent},
             params={'text': text, 'area': area, 'type': emp_type, 'only_with_vacancies': only_with_vacancies,
@@ -40,7 +40,7 @@ class EmployerServiceSteps(BaseSteps):
     @allure.step('get 5001st employer')
     def get_5001_employer(self, user_agent, per_page: int, page: int, auth: bool = False) -> Dict:
         result = self._client.get(
-            path=f'/employers',
+            path='/employers',
             auth=auth,
             headers={'User-Agent': user_agent},
             params={'per_step': per_page, 'page': page}
@@ -61,7 +61,7 @@ class EmployerServiceSteps(BaseSteps):
     @allure.step('get employers (bad user agent)')
     def get_employers_bad_user_agent(self, user_agent, auth: bool = False) -> Dict:
         result = self._client.get(
-            path=f'/employers',
+            path='/employers',
             auth=auth,
             headers={'User-Agent': user_agent},
             params={}

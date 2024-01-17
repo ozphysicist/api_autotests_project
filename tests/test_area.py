@@ -1,8 +1,8 @@
 import allure
 import pytest
 
-from services.area.steps import AreaServiceSteps
 from helpers import get_random_string_with_letters
+from services.area.steps import AreaServiceSteps
 
 
 @allure.title("Positive case: get areas")

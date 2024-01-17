@@ -1,10 +1,9 @@
 import allure
 import pytest
-
 from asserts import assert_equal
 
-from services.employers.steps import EmployerServiceSteps
 from helpers import get_random_string_with_letters
+from services.employers.steps import EmployerServiceSteps
 
 
 @allure.title('Positive case: get employer "МойОФис"')

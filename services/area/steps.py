@@ -6,7 +6,7 @@ from asserts import assert_equal
 from base.base_steps import BaseSteps
 from helpers import get_random_string_with_letters
 from services.area.utils import validate_areas_list_data
-from vars.enums import ResponseCodes, ErrorMessages
+from vars.enums import ErrorMessages, ResponseCodes
 
 
 class AreaServiceSteps(BaseSteps):
@@ -14,7 +14,7 @@ class AreaServiceSteps(BaseSteps):
     def get_areas(self, user_agent: str, auth: bool = False, locale: str = None, host: str = None,
                   additional_case: str = None) -> Dict:
         result = self._client.get(
-            path=f'/areas',
+            path='/areas',
             auth=auth,
             headers={'HH-User-Agent': user_agent},
             params={'locale': locale, 'host': host, 'additional_case': additional_case}
@@ -36,7 +36,7 @@ class AreaServiceSteps(BaseSteps):
     @allure.step('get area (bad user agent)')
     def get_area_bad_user_agent(self, user_agent, auth: bool = False) -> Dict:
         result = self._client.get(
-            path=f'/areas',
+            path='/areas',
             auth=auth,
             headers={'User-Agent': user_agent},
             params={}
@@ -52,7 +52,7 @@ class AreaServiceSteps(BaseSteps):
     def get_area_invalid_locale(self, user_agent: str, auth: bool = False) -> Dict:
         locale = get_random_string_with_letters(2)
         result = self._client.get(
-            path=f'/areas',
+            path='/areas',
             auth=auth,
             headers={'HH-User-Agent': user_agent},
             params={'locale': locale}

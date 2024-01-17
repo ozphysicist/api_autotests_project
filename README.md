@@ -18,11 +18,11 @@ urllib3==1.26.18
 
 ## Запуск автотестов
 
-1. Клонировать репозиторий и перейти в директорию api_autotests_project:
+1. Клонировать репозиторий и мерейти в него:
 
 ```git clone <cсылка на репозиторий github>```
 
-```cd <path>/pytest_autotest_project```
+```cd pytest_autotest_project```
 
 2. Cоздать и активировать виртуальное окружение:
 ```python3 -m venv venv```
